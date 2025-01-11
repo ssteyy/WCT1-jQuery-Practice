@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Events</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <style>
+        .highlight {
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <h1>jQuery Events Example</h1>
+    <p id="text">Hover over this text or double-click it!</p>
+    <button id="click-me">Click Me</button>
+    <input type="text" id="input-field" placeholder="Type something...">
+
+    <script>
+        $(document).ready(function () {
+            $('#click-me').click(function () {
+                alert('Button clicked!');
+            });
+
+            $('#text').hover(
+                function () {
+                    $(this).addClass('highlight');
+                },
+                function () {
+                    $(this).removeClass('highlight');
+                }
+            );
+
+            $('#text').dblclick(function () {
+                $(this).text('You double-clicked this text!');
+            });
+
+            $('#input-field').keypress(function () {
+                $('#text').text('You are typing...');
+            });
+        });
+    </script>
+</body>
+</html>

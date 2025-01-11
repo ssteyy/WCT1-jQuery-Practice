@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Selectors</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <style>
+        .highlight {
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="main-title">Welcome to jQuery Selectors</h1>
+    <p class="intro">This is a paragraph with the class "intro".</p>
+    <p>This is a normal paragraph.</p>
+    <ul>
+        <li class="list-item">Item 1</li>
+        <li class="list-item">Item 2</li>
+        <li>Item 3</li>
+    </ul>
+    <button id="select-all">Highlight All Paragraphs</button>
+    <button id="select-class">Highlight Items with Class</button>
+    <button id="select-id">Highlight Title</button>
+
+    <script>
+        $(document).ready(function () {
+            $('#select-all').click(function () {
+                $('p').addClass('highlight');
+            });
+
+            $('#select-class').click(function () {
+                $('.list-item').addClass('highlight');
+            });
+
+            $('#select-id').click(function () {
+                $('#main-title').addClass('highlight');
+            });
+        });
+    </script>
+</body>
+</html>

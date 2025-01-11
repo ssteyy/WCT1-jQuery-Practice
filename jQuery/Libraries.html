@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Libraries Example</title>
+    <!-- Include jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <!-- Include jQuery UI -->
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+    <!-- Include jQuery UI CSS -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/smoothness/jquery-ui.css">
+    <style>
+        #draggable {
+            width: 150px;
+            height: 150px;
+            background-color: lightblue;
+            text-align: center;
+            line-height: 150px;
+            font-size: 18px;
+            border: 1px solid #333;
+            cursor: move;
+            margin: 20px auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Working with jQuery Libraries</h1>
+    <p>Drag the box below:</p>
+    <div id="draggable">Drag me!</div>
+
+    <script>
+        $(document).ready(function () {
+            // Make the #draggable element draggable using jQuery UI
+            $('#draggable').draggable();
+        });
+    </script>
+</body>
+</html>
